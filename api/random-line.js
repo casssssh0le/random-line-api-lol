@@ -14,7 +14,7 @@ module.exports = async function (req, res) {
       const lines = data.split('\n').filter(line => line.trim() !== '');
       const randomLine = lines[Math.floor(Math.random() * lines.length)];
       res.statusCode = 200;
-      res.setHeader('Content-Type', 'text/plain');
+      res.setHeader('Content-Type', 'text/plain; charset=utf-8');
       res.end(randomLine);
     });
 
